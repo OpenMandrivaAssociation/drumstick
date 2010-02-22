@@ -13,7 +13,6 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:	cmake
 BuildRequires:	qt4-devel
 BuildRequires:	alsa-lib-devel
-BuildRequires:	desktop-file-utils
 
 
 %description
@@ -47,7 +46,7 @@ sed -i -e 's/CREATE_LIBTOOL_FILE/#CREATE_LIBTOOL_FILE/g' library/CMakeLists.txt
 
 
 %build
-%cmake_kde4
+%cmake
 %make
 
 
