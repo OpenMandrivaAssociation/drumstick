@@ -1,14 +1,11 @@
 Name:		drumstick
 Summary:	C++/Qt4 wrapper around the ALSA library sequencer interface
-Version:	0.2.99
-Release:	%mkrel -c svn 1
+Version:	0.3.0
+Release:	%mkrel 1
 Group:		Development/C++
 License:	GPLv2+
 URL:		http://drumstick.sourceforge.net/
-Source0:	http://downloads.sourceforge.net/project/drumstick/%{version}svn/drumstick-%{version}svn.tar.bz2
-# use patch from svn to make it work with kmid2
-# svn diff -r 137:141 https://drumstick.svn.sourceforge.net/svnroot/drumstick/trunk
-Patch0:		drumstick-0.2.99-20100208svn.patch
+Source0:	http://downloads.sourceforge.net/project/drumstick/%{version}svn/drumstick-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:	cmake
 BuildRequires:	qt4-devel
@@ -39,21 +36,15 @@ This package contains the test/example programs for %{name}.
 
 
 %prep
-%setup -q -n %{name}-%{version}svn
-%patch0 -p0
-# don't create .la file
-sed -i -e 's/CREATE_LIBTOOL_FILE/#CREATE_LIBTOOL_FILE/g' library/CMakeLists.txt
-
+%setup -q -n %{name}-%{version}
 
 %build
 %cmake
 %make
 
-
 %install
 rm -rf %{buildroot}
 %makeinstall_std -C build
-
 
 %clean
 rm -rf %{buildroot}
@@ -62,12 +53,13 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 %doc ChangeLog COPYING
-%{_libdir}/libdrumstick.so.*
+%{_datadir}/mime/packages/drumstick.xml
+%{_libdir}/libdrumstick*.so.*
 
 %files devel
 %defattr(-,root,root,-)
-%{_libdir}/libdrumstick.so
-%{_libdir}/pkgconfig/drumstick.pc
+%{_libdir}/libdrumstick*.so
+%{_libdir}/pkgconfig/*.pc
 %{_includedir}/drumstick/
 %{_includedir}/drumstick.h
 
