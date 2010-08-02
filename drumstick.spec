@@ -1,16 +1,17 @@
 Name:		drumstick
 Summary:	C++/Qt4 wrapper around the ALSA library sequencer interface
-Version:	0.3.1
+Version:	0.4.1
 Release:	%mkrel 1
 Group:		Development/C++
 License:	GPLv2+
 URL:		http://drumstick.sourceforge.net/
-Source0:	http://downloads.sourceforge.net/project/drumstick/%{version}svn/drumstick-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/project/drumstick/%{version}/%{name}-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:	cmake
 BuildRequires:	qt4-devel
 BuildRequires:	alsa-lib-devel
-
+# to build the manpages
+BuildRequires:	docbook-dtd45-xml xsltproc
 
 %description
 The drumstick library is a C++ wrapper around the ALSA library sequencer
@@ -54,7 +55,8 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 %doc ChangeLog COPYING
 %{_datadir}/mime/packages/drumstick.xml
-%{_libdir}/libdrumstick*.so.*
+%{_libdir}/libdrumstick-alsa.so.0*
+%{_libdir}/libdrumstick-file.so.0*
 
 %files devel
 %defattr(-,root,root,-)
@@ -68,3 +70,4 @@ rm -rf %{buildroot}
 %{_bindir}/drumstick-*
 %{_datadir}/applications/drumstick-*.desktop
 %{_datadir}/icons/hicolor/*/apps/*
+%{_mandir}/man1/%{name}-*
