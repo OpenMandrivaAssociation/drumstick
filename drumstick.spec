@@ -11,7 +11,7 @@ BuildRequires:	cmake
 BuildRequires:	qt4-devel
 BuildRequires:	alsa-lib-devel
 # to build the manpages
-BuildRequires:	docbook-dtd45-xml xsltproc
+BuildRequires:	docbook-style-xsl xsltproc
 
 %description
 The drumstick library is a C++ wrapper around the ALSA library sequencer
