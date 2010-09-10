@@ -1,6 +1,6 @@
 Name:		drumstick
 Summary:	C++/Qt4 wrapper around the ALSA library sequencer interface
-Version:	0.4.1
+Version:	0.5.0
 Release:	%mkrel 1
 Group:		Development/C++
 License:	GPLv2+
