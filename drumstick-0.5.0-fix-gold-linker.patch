@@ -1,0 +1,21 @@
+diff -rupN drumstick-0.5.0.old/utils/vpiano/CMakeLists.txt drumstick-0.5.0/utils/vpiano/CMakeLists.txt
+--- drumstick-0.5.0.old/utils/vpiano/CMakeLists.txt	2010-09-09 12:38:54.000000000 +0200
++++ drumstick-0.5.0/utils/vpiano/CMakeLists.txt	2012-10-12 20:42:50.000000000 +0200
+@@ -7,6 +7,8 @@ SET(vpiano_forms_SRCS
+ 
+ QT4_WRAP_UI(vpiano_ui_SRCS ${vpiano_forms_SRCS})
+ 
++FIND_PACKAGE(X11)
++
+ SET(vpiano_SRCS
+     pianokey.cpp
+     pianokey.h
+@@ -52,7 +54,7 @@ ADD_EXECUTABLE(drumstick-vpiano
+ TARGET_LINK_LIBRARIES(drumstick-vpiano
+     ${QT_LIBRARIES} 
+     ${ALSA_LIBS} 
+-    ${QT_X11_X11_LIBRARY}
++    ${X11_X11_LIB}
+     drumstick-common
+     drumstick-alsa
+ )
