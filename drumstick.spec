@@ -19,7 +19,7 @@ BuildRequires:	graphviz
 # See INSTALL file
 BuildRequires:	shared-mime-info >= 0.3.0
 # vpiano example program needs it
-BuildRequires:	libx11-devel
+BuildRequires:	pkgconfig(x11)
 
 %description
 The %{name} library is a C++ wrapper around the ALSA library sequencer
