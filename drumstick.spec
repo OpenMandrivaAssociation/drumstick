@@ -5,12 +5,12 @@
 
 Summary:	C++/Qt4 wrapper around the ALSA library sequencer interface
 Name:		drumstick
-Version:	0.5.0
-Release:	5
+Version:	1.0.0
+Release:	1
 Group:		Development/C++
 License:	GPLv2+
 Url:		http://drumstick.sourceforge.net/
-Source0:	http://downloads.sourceforge.net/project/drumstick/%{version}/%{name}-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/project/drumstick/1.0.0/%{name}-%{version}.tar.bz2
 Patch0:		drumstick-0.5.0-fix-gold-linker.patch
 BuildRequires:	cmake
 BuildRequires:	qt4-devel
@@ -115,4 +115,3 @@ This package contains the test/example programs for %{name}.
 
 %install
 %makeinstall_std -C build
-

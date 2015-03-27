@@ -1,2 +1,4 @@
+removed_sources:
+  drumstick-0.5.0.tar.bz2: 1a2e265dcea8c8066add8f87ad4902e79519aa09
 sources:
-  "drumstick-0.5.0.tar.bz2": 1a2e265dcea8c8066add8f87ad4902e79519aa09
+  drumstick-1.0.0.tar.bz2: 868d2c5bbbbfa4ec913a2f22c21da022948e4ebd
