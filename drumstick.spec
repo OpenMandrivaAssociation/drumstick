@@ -21,8 +21,10 @@ BuildRequires:	cmake(Qt5DBus)
 BuildRequires:	cmake(Qt5Gui)
 BuildRequires:	cmake(Qt5Network)
 BuildRequires:	cmake(Qt5Svg)
+BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	pkgconfig(alsa)
+BuildRequires:	pkgconfig(libpulse-simple)
 # vpiano example program needs it
 BuildRequires:	pkgconfig(x11)
 # to build the manpages
