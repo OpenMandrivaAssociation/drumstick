@@ -84,7 +84,7 @@ Drumstick shared library.
 
 %files -n %{librt}
 %{_libdir}/lib%{name}-rt.so.%{major}*
-%{_libdir}/drumstick
+#{_libdir}/drumstick
 
 #----------------------------------------------------------------------------
 
