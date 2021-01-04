@@ -84,8 +84,9 @@ Drumstick shared library.
 
 %files -n %{librt}
 %{_libdir}/lib%{name}-rt.so.%{major}*
-#{_libdir}/drumstick
-
+%{_libdir}/%{name}2/
+%{_libdir}/libdrumstick-widgets.so.%{major}*
+%{_qt5_plugindir}/designer/lib%{name}-vpiano-plugin.so
 #----------------------------------------------------------------------------
 
 %package -n %{devname}
@@ -107,7 +108,9 @@ the files needed for build programs against %{name}.
 %{_libdir}/libdrumstick-alsa.so
 %{_libdir}/libdrumstick-file.so
 %{_libdir}/libdrumstick-rt.so
+%{_libdir}/libdrumstick-widgets.so
 %{_libdir}/pkgconfig/*.pc
+%{_libdir}/cmake/%{name}/
 %{_includedir}/drumstick/
 %{_includedir}/drumstick.h
 
@@ -126,6 +129,7 @@ This package contains the test/example programs for %{name}.
 %{_datadir}/applications/drumstick-*.desktop
 %{_datadir}/icons/hicolor/*/apps/*
 %{_mandir}/man1/%{name}-*
+%{_datadir}/%{name}/
 
 #----------------------------------------------------------------------------
 
