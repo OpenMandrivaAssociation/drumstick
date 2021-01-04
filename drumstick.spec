@@ -1,4 +1,4 @@
-%define major 1
+%define major 2
 %define libalsa %mklibname %{name}-alsa %{major}
 %define libfile %mklibname %{name}-file %{major}
 %define librt   %mklibname %{name}-rt   %{major}
@@ -6,22 +6,24 @@
 
 Summary:	C++/Qt5 wrapper around the ALSA library sequencer interface
 Name:		drumstick
-Version:	1.1.2
+Version:	2.0.0
 Release:	1
 Group:		Development/C++
 License:	GPLv2+
 Url:		http://drumstick.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/project/drumstick/%{version}/%{name}-%{version}.tar.bz2
-#Patch0:		drumstick-0.5.0-fix-gold-linker.patch
+
 BuildRequires:	cmake
 BuildRequires:	cmake(ECM)
 BuildRequires:	ninja
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5DBus)
 BuildRequires:	cmake(Qt5Gui)
+BuildRequires:  cmake(Qt5Help)
 BuildRequires:	cmake(Qt5Network)
 BuildRequires:	cmake(Qt5Svg)
 BuildRequires:	cmake(Qt5Test)
+BuildRequires:  cmake(Qt5UiPlugin)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(libpulse-simple)
@@ -82,8 +84,9 @@ Drumstick shared library.
 
 %files -n %{librt}
 %{_libdir}/lib%{name}-rt.so.%{major}*
-%{_libdir}/drumstick
-
+%{_libdir}/%{name}2/
+%{_libdir}/libdrumstick-widgets.so.%{major}*
+%{_prefix}/plugins/designer/libdrumstick-vpiano-plugin.so
 #----------------------------------------------------------------------------
 
 %package -n %{devname}
@@ -105,7 +108,9 @@ the files needed for build programs against %{name}.
 %{_libdir}/libdrumstick-alsa.so
 %{_libdir}/libdrumstick-file.so
 %{_libdir}/libdrumstick-rt.so
+%{_libdir}/libdrumstick-widgets.so
 %{_libdir}/pkgconfig/*.pc
+%{_libdir}/cmake/%{name}/
 %{_includedir}/drumstick/
 %{_includedir}/drumstick.h
 
@@ -124,6 +129,7 @@ This package contains the test/example programs for %{name}.
 %{_datadir}/applications/drumstick-*.desktop
 %{_datadir}/icons/hicolor/*/apps/*
 %{_mandir}/man1/%{name}-*
+%{_datadir}/%{name}/
 
 #----------------------------------------------------------------------------
 
