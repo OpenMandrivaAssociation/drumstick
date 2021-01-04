@@ -94,6 +94,7 @@ Summary:	Development files for %{name}
 Group:		Development/C++
 Requires:	%{libalsa} = %{EVRD}
 Requires:	%{libfile} = %{EVRD}
+Requires:	%{librt} = %{EVRD}
 Provides:	%{name}-devel = %{EVRD}
 Conflicts:	%{name}-devel < 0.5.0-4
 Obsoletes:	%{name}-devel < 0.5.0-4
