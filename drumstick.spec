@@ -86,7 +86,7 @@ Drumstick shared library.
 %{_libdir}/lib%{name}-rt.so.%{major}*
 %{_libdir}/%{name}2/
 %{_libdir}/libdrumstick-widgets.so.%{major}*
-%{_qt5_plugindir}/designer/lib%{name}-vpiano-plugin.so
+%{_prefix}/plugins/designer/libdrumstick-vpiano-plugin.so
 #----------------------------------------------------------------------------
 
 %package -n %{devname}
