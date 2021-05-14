@@ -26,6 +26,8 @@ BuildRequires:	cmake(Qt5Test)
 BuildRequires:  cmake(Qt5UiPlugin)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	pkgconfig(alsa)
+BuildRequires:  pkgconfig(dbus-1)
+BuildRequires:  pkgconfig(fluidsynth)
 BuildRequires:	pkgconfig(libpulse-simple)
 # vpiano example program needs it
 BuildRequires:	pkgconfig(x11)
@@ -44,7 +46,7 @@ interface, using Qt5 objects, idioms and style. The ALSA sequencer
 interface provides software support for MIDI technology on GNU/Linux.
 
 %files
-%doc AUTHORS ChangeLog COPYING NEWS README TODO
+%doc AUTHORS ChangeLog COPYING NEWS readme.md TODO
 %{_datadir}/mime/packages/drumstick.xml
 
 #----------------------------------------------------------------------------
