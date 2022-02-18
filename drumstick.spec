@@ -129,7 +129,7 @@ This package contains the test/example programs for %{name}.
 
 %files examples
 %{_bindir}/drumstick-*
-%{_datadir}/applications/net.sourceforge.drumstick-drumgrid.deskto
+%{_datadir}/applications/net.sourceforge.drumstick-drumgrid.desktop
 %{_datadir}/icons/hicolor/*/apps/*
 %{_mandir}/man1/%{name}-*
 %{_datadir}/%{name}/
