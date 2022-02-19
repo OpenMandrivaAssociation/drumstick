@@ -130,6 +130,11 @@ This package contains the test/example programs for %{name}.
 %files examples
 %{_bindir}/drumstick-*
 %{_datadir}/applications/net.sourceforge.drumstick-drumgrid.desktop
+%{_datadir}/net.sourceforge.drumstick-guiplayer.desktop
+%{_datadir}/net.sourceforge.drumstick-vpiano.desktop
+%{_datadir}/metainfo/net.sourceforge.drumstick-drumgrid.metainfo.xm
+%{_datadir}/metainfo/net.sourceforge.drumstick-guiplayer.metainfo.xml
+%{_datadir}/metainfo/net.sourceforge.drumstick-vpiano.metainfo.xml
 %{_datadir}/icons/hicolor/*/apps/*
 %{_mandir}/man1/%{name}-*
 %{_datadir}/%{name}/
