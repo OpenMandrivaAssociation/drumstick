@@ -7,7 +7,7 @@
 Summary:	C++/Qt5 wrapper around the ALSA library sequencer interface
 Name:		drumstick
 Version:	2.6.1
-Release:	1
+Release:	2
 Group:		Development/C++
 License:	GPLv2+
 Url:		http://drumstick.sourceforge.net/
