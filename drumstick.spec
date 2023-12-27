@@ -1,7 +1,10 @@
 %define major 2
-%define libalsa %mklibname %{name}-alsa %{major}
-%define libfile %mklibname %{name}-file %{major}
-%define librt   %mklibname %{name}-rt   %{major}
+%define libalsa %mklibname %{name}-alsa
+%define oldlibalsa %mklibname %{name}-alsa 2
+%define libfile %mklibname %{name}-file
+%define oldlibfile %mklibname %{name}-file 2
+%define librt   %mklibname %{name}-rt
+%define oldlibrt   %mklibname %{name}-rt   2
 %define devname %mklibname %{name} -d
 
 Summary:	C++/Qt6 wrapper around the ALSA library sequencer interface
@@ -26,6 +29,7 @@ BuildRequires:	cmake(Qt6Svg)
 BuildRequires:	cmake(Qt6Test)
 BuildRequires:  cmake(Qt6UiPlugin)
 BuildRequires:	cmake(Qt6Widgets)
+BuildRequires:	qt6-qtbase-theme-gtk3
 BuildRequires:  cmake(sonivox)
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:  pkgconfig(dbus-1)
@@ -57,6 +61,7 @@ interface provides software support for MIDI technology on GNU/Linux.
 Summary:	Drumstick shared library
 Group:		System/Libraries
 Conflicts:	%{name} < 0.5.0-4
+%rename %{oldlibalsa}
 
 %description -n %{libalsa}
 Drumstick shared library.
@@ -70,6 +75,7 @@ Drumstick shared library.
 Summary:	Drumstick shared library
 Group:		System/Libraries
 Conflicts:	%{name} < 0.5.0-4
+%rename %{oldlibfile}
 
 %description -n %{libfile}
 Drumstick shared library.
@@ -82,6 +88,7 @@ Drumstick shared library.
 %package -n %{librt}
 Summary:	Drumstick shared library
 Group:		System/Libraries
+%rename %{oldlibrt}
 
 %description -n %{librt}
 Drumstick shared library.
