@@ -1,0 +1,6 @@
+# The Designer plugin is out of %%_libdir and has no soname
+addFilter("E: outside-libdir-files")
+addFilter("E: non-versioned-file-in-library-package")
+addFilter("W: non-standard-dir-in-usr plugins")
+
+
