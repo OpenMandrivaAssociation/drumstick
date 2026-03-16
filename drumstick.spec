@@ -9,8 +9,8 @@
 
 Summary:	C++/Qt6 wrapper around the ALSA library sequencer interface
 Name:	drumstick
-Version:	2.10.0
-Release:	2
+Version:	2.11.0
+Release:	1
 License:	GPLv2+
 Group:	Sound
 Url:		https://drumstick.sourceforge.net/
@@ -23,10 +23,10 @@ BuildRequires:	docbook-dtd-xml
 BuildRequires:	doxygen >= 1.5.0
 BuildRequires:	graphviz
 BuildRequires:	gzip-utils
-BuildRequires:	xsltproc
 BuildRequires:	ninja
 BuildRequires:	qt6-qtbase-theme-gtk3
 BuildRequires:	shared-mime-info >= 0.30
+BuildRequires:	xsltproc
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6Core) >= 6.2.0
 BuildRequires:	cmake(Qt6Core5Compat)
@@ -38,7 +38,7 @@ BuildRequires:	cmake(Qt6Svg)
 BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(Qt6UiPlugin)
 BuildRequires:	cmake(Qt6Widgets)
-BuildRequires:	cmake(sonivox)
+BuildRequires:	cmake(sonivox) >= 4.0
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(fluidsynth)
